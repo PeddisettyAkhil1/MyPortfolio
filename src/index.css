@@ -1,0 +1,172 @@
+@import "@fontsource-variable/outfit";
+@import "@fontsource-variable/plus-jakarta-sans";
+@import "@fontsource-variable/jetbrains-mono";
+
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: 40 15% 96%;
+    --foreground: 220 15% 12%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 12%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 12%;
+    
+    --primary: 220 15% 12%;
+    --primary-foreground: 40 15% 96%;
+    
+    --secondary: 40 12% 92%;
+    --secondary-foreground: 220 15% 12%;
+    
+    --muted: 40 10% 93%;
+    --muted-foreground: 220 8% 42%;
+    
+    --accent: 28 85% 56%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 40 10% 88%;
+    --input: 40 10% 88%;
+    --ring: 28 85% 56%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 220 18% 10%;
+    --foreground: 40 15% 94%;
+    
+    --card: 220 16% 13%;
+    --card-foreground: 40 15% 94%;
+    
+    --popover: 220 16% 13%;
+    --popover-foreground: 40 15% 94%;
+    
+    --primary: 40 15% 94%;
+    --primary-foreground: 220 18% 10%;
+    
+    --secondary: 220 14% 18%;
+    --secondary-foreground: 40 15% 94%;
+    
+    --muted: 220 14% 18%;
+    --muted-foreground: 220 10% 65%;
+    
+    --accent: 28 85% 56%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 40 15% 94%;
+    
+    --border: 220 14% 20%;
+    --input: 220 14% 20%;
+    --ring: 28 85% 56%;
+  }
+}
+
+body {
+  font-family: 'Plus Jakarta Sans Variable', 'Plus Jakarta Sans', sans-serif;
+  background-color: #F7F6F3;
+  color: #1B1E23;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+html.no-scroll, body.no-scroll {
+  overflow: hidden !important;
+  height: 100vh !important;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: 'Outfit Variable', 'Outfit', sans-serif;
+}
+
+code, pre, .font-mono {
+  font-family: 'JetBrains Mono Variable', 'JetBrains Mono', monospace;
+}
+
+/* Custom Utilities */
+.bg-paper {
+  background-color: #F7F6F3;
+}
+
+.text-charcoal {
+  color: #1B1E23;
+}
+
+.bg-charcoal {
+  background-color: #1B1E23;
+}
+
+.border-paper-border {
+  border-color: #E5E2DC;
+}
+
+.accent-glow {
+  box-shadow: 0 0 25px rgba(230, 95, 43, 0.25);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.04);
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.glass-panel-warm {
+  background: rgba(242, 240, 234, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.03);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F7F6F3;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D1CDC4;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E65F2B;
+}
+
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none !important;
+  height: 0 !important;
+  width: 0 !important;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+/* Canvas styling */
+canvas {
+  touch-action: none;
+}
