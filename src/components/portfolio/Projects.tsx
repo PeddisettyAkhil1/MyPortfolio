@@ -90,10 +90,10 @@ export const Projects: React.FC = () => {
             >
               <TiltCard3D
                 onClick={() => setSelectedProject(project)}
-                className="group bg-white/85 backdrop-blur-md rounded-[28px] overflow-hidden border border-white/80 hover:border-[#1B1E23]/30 shadow-xs hover:shadow-2xl transition-all duration-300 flex flex-col justify-between h-full"
+                className="group bg-white rounded-[28px] overflow-hidden border border-[#E5E2DC] hover:border-[#E65F2B]/50 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between h-full"
               >
                 {/* Cover Image Container with Monospaced Badges */}
-                <div className="relative aspect-[16/10] overflow-hidden bg-[#F0EEE8]">
+                <div className="relative aspect-[16/10] overflow-hidden rounded-t-[27px] bg-[#F0EEE8]">
                   <img
                     src={project.coverImage}
                     alt={project.title}

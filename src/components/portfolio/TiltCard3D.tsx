@@ -41,7 +41,7 @@ export const TiltCard3D: React.FC<TiltCard3DProps> = ({ children, className = ''
   };
 
   return (
-    <div className="perspective-1000">
+    <div className="perspective-1000 p-1">
       <motion.div
         ref={cardRef}
         onClick={onClick}
@@ -55,14 +55,14 @@ export const TiltCard3D: React.FC<TiltCard3DProps> = ({ children, className = ''
         }}
         transition={{ type: 'spring', stiffness: 350, damping: 25 }}
         style={{ transformStyle: 'preserve-3d' }}
-        className={`relative overflow-hidden cursor-pointer transition-shadow duration-300 ${className}`}
+        className={`relative cursor-pointer transition-shadow duration-300 ${className}`}
       >
         {children}
 
         {/* 3D Dynamic Light Glare Overlay */}
         {isHovered && (
           <div
-            className="pointer-events-none absolute inset-0 z-30 transition-opacity duration-300"
+            className="pointer-events-none absolute inset-0 z-30 transition-opacity duration-300 rounded-[28px]"
             style={{
               background: `radial-gradient(circle at ${glarePosition.x}% ${glarePosition.y}%, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0) 65%)`,
             }}
