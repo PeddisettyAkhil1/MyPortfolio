@@ -381,6 +381,11 @@ export const BlockDashDemo: React.FC = () => {
           if (gameState === 'playing') triggerJump();
           else startGame();
         }}
+        onTouchStart={(e) => {
+          e.preventDefault();
+          if (gameState === 'playing') triggerJump();
+          else startGame();
+        }}
         className="relative w-full aspect-[2/1] bg-[#F4F2EC] rounded-xl overflow-hidden cursor-pointer select-none border border-white/10 shadow-inner group"
       >
         <canvas ref={canvasRef} width={640} height={260} className="w-full h-full block" />

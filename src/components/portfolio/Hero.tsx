@@ -149,21 +149,21 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate, active3DFocus }) => {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="lg:col-span-5 h-full min-h-[380px] lg:min-h-[440px] relative rounded-3xl overflow-hidden bg-gradient-to-b from-[#EFECE6] to-[#E5E1D8] border border-[#E5E2DC] shadow-xl flex flex-col"
+          className="lg:col-span-5 h-full min-h-[300px] sm:min-h-[360px] lg:min-h-[440px] relative rounded-3xl overflow-hidden bg-gradient-to-b from-[#EFECE6] to-[#E5E1D8] border border-[#E5E2DC] shadow-xl flex flex-col"
         >
           {/* 3D Scene */}
           <HeroScene3D activeFocus={active3DFocus} />
 
-          {/* Personal Suit Photo Overlay */}
-          <div className="absolute top-4 right-4 z-20 flex items-center space-x-3 bg-white/90 backdrop-blur-md p-2 rounded-2xl border border-[#E5E2DC] shadow-lg">
-            <div className="w-12 h-12 rounded-xl overflow-hidden bg-[#F0EEE8] shrink-0 border border-[#E5E2DC]">
+          {/* Personal Suit Photo Overlay (Top Left so it never collides with top-right camera buttons) */}
+          <div className="absolute top-3 left-3 sm:top-4 sm:left-4 z-20 flex items-center space-x-2.5 sm:space-x-3 bg-white/90 backdrop-blur-md p-1.5 sm:p-2 rounded-2xl border border-[#E5E2DC] shadow-lg pointer-events-auto">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl overflow-hidden bg-[#F0EEE8] shrink-0 border border-[#E5E2DC]">
               <img
                 src={PERSONAL_INFO.images.portrait}
                 alt={PERSONAL_INFO.name}
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="pr-2">
+            <div className="pr-1.5 sm:pr-2">
               <div className="text-xs sm:text-sm font-bold text-[#1B1E23] leading-tight font-heading">
                 {PERSONAL_INFO.name}
               </div>

@@ -467,10 +467,10 @@ export const HeroScene3D: React.FC<SceneProps> = () => {
   return (
     <div className="w-full h-full relative cursor-grab active:cursor-grabbing bg-[#F7F6F3]">
       {/* Top Right Camera Preset View Buttons */}
-      <div className="absolute top-4 right-4 z-20 flex flex-col space-y-1.5 pointer-events-auto">
+      <div className="absolute top-3 right-3 sm:top-4 sm:right-4 z-20 flex flex-col space-y-1 sm:space-y-1.5 pointer-events-auto">
         <button
           onClick={() => setCameraMode('arcade')}
-          className={`px-3 py-1.5 rounded-lg text-[10px] font-mono font-bold tracking-wider uppercase transition-all shadow-sm cursor-pointer ${
+          className={`px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg text-[9px] sm:text-[10px] font-mono font-bold tracking-wider uppercase transition-all shadow-sm cursor-pointer ${
             cameraMode === 'arcade'
               ? 'bg-[#E65F2B] text-white border border-[#E65F2B]'
               : 'bg-white/90 text-[#1B1E23] hover:bg-white border border-[#E5E2DC]'
@@ -480,7 +480,7 @@ export const HeroScene3D: React.FC<SceneProps> = () => {
         </button>
         <button
           onClick={() => setCameraMode('desk')}
-          className={`px-3 py-1.5 rounded-lg text-[10px] font-mono font-bold tracking-wider uppercase transition-all shadow-sm cursor-pointer ${
+          className={`px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg text-[9px] sm:text-[10px] font-mono font-bold tracking-wider uppercase transition-all shadow-sm cursor-pointer ${
             cameraMode === 'desk'
               ? 'bg-[#E65F2B] text-white border border-[#E65F2B]'
               : 'bg-white/90 text-[#1B1E23] hover:bg-white border border-[#E5E2DC]'
@@ -490,7 +490,7 @@ export const HeroScene3D: React.FC<SceneProps> = () => {
         </button>
         <button
           onClick={() => setCameraMode('shelf')}
-          className={`px-3 py-1.5 rounded-lg text-[10px] font-mono font-bold tracking-wider uppercase transition-all shadow-sm cursor-pointer ${
+          className={`px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg text-[9px] sm:text-[10px] font-mono font-bold tracking-wider uppercase transition-all shadow-sm cursor-pointer ${
             cameraMode === 'shelf'
               ? 'bg-[#E65F2B] text-white border border-[#E65F2B]'
               : 'bg-white/90 text-[#1B1E23] hover:bg-white border border-[#E5E2DC]'
@@ -500,7 +500,7 @@ export const HeroScene3D: React.FC<SceneProps> = () => {
         </button>
         <button
           onClick={() => setCameraMode('overview')}
-          className="px-3 py-1.5 rounded-lg text-[10px] font-mono font-bold tracking-wider uppercase bg-[#1B1E23] text-white shadow-md hover:bg-[#E65F2B] transition-colors cursor-pointer"
+          className="px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg text-[9px] sm:text-[10px] font-mono font-bold tracking-wider uppercase bg-[#1B1E23] text-white shadow-md hover:bg-[#E65F2B] transition-colors cursor-pointer"
         >
           RESET ORBIT
         </button>
